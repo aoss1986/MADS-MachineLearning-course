@@ -1,0 +1,6 @@
+# Defining the parameters for CNN models in Notebook 9
+
+CNN.num_classes = 10
+CNN.kernel_size = 3
+CNN.filter1 = 128
+CNN.filter2 = 64
