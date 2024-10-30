@@ -9,7 +9,6 @@
 #   generate-hashes: false
 #   universal: false
 
--e file:.
 absl-py==2.1.0
     # via tensorboard
 aiosignal==1.3.1
@@ -26,7 +25,6 @@ attrs==23.2.0
 backports-tarfile==1.1.1
     # via jaraco-context
 bayesian-optimization==1.4.3
-    # via mads-deeplearning
 blinker==1.8.2
     # via flask
 certifi==2024.2.2
@@ -45,7 +43,6 @@ cloudpickle==3.0.0
 colorama==0.4.6
     # via bayesian-optimization
 configspace==0.7.1
-    # via mads-deeplearning
 contourpy==1.2.1
     # via matplotlib
 cryptography==43.0.1
@@ -92,7 +89,6 @@ grpcio==1.63.0
 gunicorn==21.2.0
     # via mlflow
 hyperopt==0.2.7
-    # via mads-deeplearning
 idna==3.7
     # via requests
 importlib-metadata==7.1.0
@@ -125,10 +121,8 @@ kiwisolver==1.4.5
     # via matplotlib
 loguru==0.7.2
     # via mads-datasets
-    # via mads-deeplearning
     # via mltrainer
 mads-datasets==0.3.12
-    # via mads-deeplearning
 mako==1.3.3
     # via alembic
 markdown==3.6
@@ -139,13 +133,11 @@ markupsafe==2.1.5
     # via mako
     # via werkzeug
 matplotlib==3.8.4
-    # via mads-deeplearning
     # via mlflow
     # via seaborn
 mlflow==2.12.1
     # via mltrainer
 mltrainer==0.1.127
-    # via mads-deeplearning
 more-itertools==10.2.0
     # via configspace
     # via jaraco-classes
@@ -157,13 +149,14 @@ msgpack==1.0.8
 networkx==3.3
     # via hyperopt
     # via torch
+nodeenv==1.9.1
+    # via pyright
 numpy==1.26.4
     # via bayesian-optimization
     # via configspace
     # via contourpy
     # via hyperopt
     # via mads-datasets
-    # via mads-deeplearning
     # via matplotlib
     # via mlflow
     # via mltrainer
@@ -214,7 +207,6 @@ packaging==24.0
     # via tensorboardx
 pandas==2.2.2
     # via mads-datasets
-    # via mads-deeplearning
     # via mlflow
     # via ray
     # via seaborn
@@ -224,7 +216,6 @@ pillow==10.3.0
     # via matplotlib
     # via torchvision
 plotly==5.22.0
-    # via mads-deeplearning
 polars==1.5.0
     # via mads-datasets
 protobuf==5.26.1
@@ -241,13 +232,13 @@ pycparser==2.22
     # via cffi
 pydantic==2.7.1
     # via mads-datasets
-    # via mads-deeplearning
     # via mltrainer
 pydantic-core==2.18.2
     # via pydantic
 pyparsing==3.1.2
     # via configspace
     # via matplotlib
+pyright==1.1.387
 python-dateutil==2.9.0.post0
     # via matplotlib
     # via pandas
@@ -283,7 +274,6 @@ scipy==1.13.0
     # via mlflow
     # via scikit-learn
 seaborn==0.13.2
-    # via mads-deeplearning
 secretstorage==3.3.3
     # via keyring
 setuptools==69.5.1
@@ -305,7 +295,6 @@ sympy==1.12
 tenacity==8.3.0
     # via plotly
 tensorboard==2.16.2
-    # via mads-deeplearning
     # via torch-tb-profiler
 tensorboard-data-server==0.7.2
     # via tensorboard
@@ -315,15 +304,12 @@ threadpoolctl==3.5.0
     # via scikit-learn
 torch==2.3.0
     # via mads-datasets
-    # via mads-deeplearning
     # via mltrainer
     # via torchtext
     # via torchvision
 torch-tb-profiler==0.4.3
-    # via mads-deeplearning
     # via mltrainer
 torchsummary==1.5.1
-    # via mads-deeplearning
 torchtext==0.18.0
     # via mltrainer
 torchvision==0.18.0
@@ -340,6 +326,7 @@ typing-extensions==4.11.0
     # via configspace
     # via pydantic
     # via pydantic-core
+    # via pyright
     # via sqlalchemy
     # via torch
 tzdata==2024.1
