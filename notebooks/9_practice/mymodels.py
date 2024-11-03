@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+import gin
 
 @gin.configurable
 class MyCNN(nn.Module):
