@@ -16,6 +16,10 @@ class MyCNN(nn.Module):
             nn.BatchNorm2d(32),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=maxpoolwindow),
+            nn.Conv2d(filter2, 32, kernel_size=kernel_size, stride=1, padding=1),
+            nn.BatchNorm2d(32),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=maxpoolwindow),
         )
         self.dense = nn.Sequential(
             nn.Flatten(),
