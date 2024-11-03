@@ -4,9 +4,9 @@ import gin
 
 @gin.configurable
 class MyCNN(nn.Module):
-    def __init__(self, num_classes: int, unit1: int, unit2: int, kernel_size: int, dropout_rate: float, maxpoolwindow: int) -> None:
+    def __init__(self, num_classes: int, kernel_size: int, unit1: int, unit2: int, dropout_rate: float, maxpoolwindow: int) -> None:
         super().__init__()
-        
+
         self.convolutions = nn.Sequential(
             nn.Conv2d(1, unit1, kernel_size=kernel_size, stride=1, padding=1),
             nn.BatchNorm2d(unit1),
