@@ -8,21 +8,23 @@ class MyCNN(nn.Module):
         super().__init__()
 
         self.convolutions = nn.Sequential(
-            nn.Conv2d(1, filter1, kernel_size=kernel_size, stride=1, padding=1),
-            nn.BatchNorm2d(filter1),
-            nn.ReLU(),
-            nn.MaxPool2d(kernel_size=maxpoolwindow),
-            nn.Conv2d(filter2, 32, kernel_size=kernel_size, stride=1, padding=1),
+            nn.Conv2d(1, 32, kernel_size=kernel_size, stride=1, padding=1),
             nn.BatchNorm2d(32),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=maxpoolwindow),
-            nn.Conv2d(filter2, 32, kernel_size=kernel_size, stride=1, padding=1),
-            nn.BatchNorm2d(32),
+            nn.Conv2d(32, 64, kernel_size=kernel_size, stride=1, padding=1),
+            nn.BatchNorm2d(64),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=maxpoolwindow),
+            nn.Conv2d(64, 128, kernel_size=kernel_size, stride=1, padding=1),
+            nn.BatchNorm2d(128),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=maxpoolwindow),
         )
         self.dense = nn.Sequential(
             nn.Flatten(),
+            nn.Linear(128 * 3 * 3, 128),
+            nn.ReLU(),
             nn.Linear(128, 64),
             nn.ReLU(),
             nn.Linear(64, 32),
