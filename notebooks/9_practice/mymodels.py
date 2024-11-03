@@ -1,26 +1,27 @@
 import torch
 import torch.nn as nn
 
+@gin.configurable
 class MyCNN(nn.Module):
-    def __init__(self, num_classes: int, units1: int, units2: int, kernel_size: int, dropout_rate: float, maxpoolwindow: int) -> None:
+    def __init__(self, num_classes: int, unit1: int, unit2: int, kernel_size: int, dropout_rate: float, maxpoolwindow: int) -> None:
         super(MyCNN, self).__init__()
         self.convolutions = nn.Sequential(
-            nn.Conv2d(1, units1, kernel_size=kernel_size, stride=1, padding=1),
-            nn.BatchNorm2d(units1),
+            nn.Conv2d(1, unit1, kernel_size=kernel_size, stride=1, padding=1),
+            nn.BatchNorm2d(unit1),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=maxpoolwindow),
-            nn.Conv2d(units1, units2, kernel_size=kernel_size, stride=1, padding=1),
-            nn.BatchNorm2d(units2),
+            nn.Conv2d(unit1, unit2, kernel_size=kernel_size, stride=1, padding=1),
+            nn.BatchNorm2d(unit2),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=maxpoolwindow),
         )
         self.dense = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(28 * 28, units1),
+            nn.Linear(28 * 28, unit1),
             nn.ReLU(),
-            nn.Linear(units1, units2),
+            nn.Linear(unit1, unit2),
             nn.ReLU(),
-            nn.Linear(units2, num_classes),
+            nn.Linear(unit2, num_classes),
             nn.Softmax(dim=1),
         )
 
