@@ -4,7 +4,7 @@ import gin.torch.external_configurables
 
 MyCNN.num_classes = 10
 MyCNN.kernel_size = 3
-MyCNN.filter1 = 32
-MyCNN.filter2 = 64
+# MyCNN.filter1 = 32
+# MyCNN.filter2 = 64
 MyCNN.dropout_rate = 0.1
 MyCNN.maxpoolwindow = 2
