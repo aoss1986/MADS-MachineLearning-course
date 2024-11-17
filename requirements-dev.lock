@@ -86,6 +86,7 @@ entrypoints==0.4
     # via mlflow
 executing==2.0.1
     # via stack-data
+fairlearn==0.11.0
 fastjsonschema==2.19.1
     # via nbformat
 filelock==3.14.0
@@ -293,6 +294,7 @@ numpy==1.26.4
     # via bayesian-optimization
     # via configspace
     # via contourpy
+    # via fairlearn
     # via hyperopt
     # via mads-datasets
     # via matplotlib
@@ -353,6 +355,7 @@ packaging==24.0
     # via ray
     # via tensorboardx
 pandas==2.2.2
+    # via fairlearn
     # via mads-datasets
     # via mlflow
     # via ray
@@ -462,10 +465,12 @@ rpds-py==0.18.1
 ruff==0.4.3
 scikit-learn==1.4.2
     # via bayesian-optimization
+    # via fairlearn
     # via mlflow
 scipy==1.13.0
     # via bayesian-optimization
     # via configspace
+    # via fairlearn
     # via hyperopt
     # via mlflow
     # via scikit-learn

@@ -53,6 +53,7 @@ docker==7.0.0
     # via mlflow
 entrypoints==0.4
     # via mlflow
+fairlearn==0.11.0
 filelock==3.14.0
     # via ray
     # via torch
@@ -155,6 +156,7 @@ numpy==1.26.4
     # via bayesian-optimization
     # via configspace
     # via contourpy
+    # via fairlearn
     # via hyperopt
     # via mads-datasets
     # via matplotlib
@@ -206,6 +208,7 @@ packaging==24.0
     # via ray
     # via tensorboardx
 pandas==2.2.2
+    # via fairlearn
     # via mads-datasets
     # via mlflow
     # via ray
@@ -266,10 +269,12 @@ rpds-py==0.18.1
     # via referencing
 scikit-learn==1.4.2
     # via bayesian-optimization
+    # via fairlearn
     # via mlflow
 scipy==1.13.0
     # via bayesian-optimization
     # via configspace
+    # via fairlearn
     # via hyperopt
     # via mlflow
     # via scikit-learn
