@@ -1,6 +1,11 @@
 import gin.torch.external_configurables
 
-mymodels.GRUModel.input_dim = 3
-mymodels.GRUModel.hidden_dim = 50
-mymodels.GRUModel.layer_dim = 50
-mymodels.GRUModel.output_dim = 20
+#mymodels.GRUModel.input_dim = 3
+#mymodels.GRUModel.hidden_dim = 50
+#mymodels.GRUModel.layer_dim = 50
+#mymodels.GRUModel.output_dim = 20
+
+mymodels.LSTM_Model.input_dim = 3
+mymodels.LSTM_Model.hidden_dim = 50
+mymodels.LSTM_Model.layer_dim = 50
+mymodels.LSTM_Model.output_dim = 20
