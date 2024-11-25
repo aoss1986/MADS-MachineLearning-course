@@ -1,6 +1,6 @@
 import gin.torch.external_configurables
 
 mymodels.GRUModel.input_dim = 3
-mymodels.GRUModel.hidden_dim = 10
+mymodels.GRUModel.hidden_dim = 50
 mymodels.GRUModel.layer_dim = 10
 mymodels.GRUModel.output_dim = 20
