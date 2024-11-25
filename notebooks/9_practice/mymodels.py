@@ -155,7 +155,7 @@ class LSTM_HyperModel(nn.Module):
 
         # We need to detach as we are doing truncated backpropagation through time (BPTT)
         # If we don't, we'll backprop all the way to the start even after going through another batch
-        out, (hn, cn) = self.lstm(x, (h0.detach(), c0.detach()))
+        out, _ = self.lstm(x, (h0, c0))
 
         # Index hidden state of last time step
         out = self.fc(out[:, -1, :])
