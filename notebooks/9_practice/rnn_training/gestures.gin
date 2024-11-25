@@ -1,6 +1,6 @@
 import gin.torch.external_configurables
 
-rnn_models.BaseRNN.input_size = 3
-rnn_models.BaseRNN.hidden_size = 100
-rnn_models.BaseRNN.num_layers = 5
-rnn_models.BaseRNN.horizon = 20
+mymodels.GRUModel.input_dim = 3
+mymodels.GRUModel.hidden_dim = 10
+mymodels.GRUModel.layer_dim = 2
+mymodels.GRUModel.output_dim = 20
