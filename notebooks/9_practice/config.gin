@@ -1,10 +1,15 @@
-# Defining the parameters for CNN models in Notebook 9
+# Defining the parameters for RNN models in Notebook 9
 
 import gin.torch.external_configurables
 
-MyCNN.num_classes = 10
-MyCNN.kernel_size = 3
+mymodels.GRUModel.input_dim = 10
+mymodels.GRUModel.hidden_dim = 20
+mymodels.GRUModel.layer_dim = 2
+mymodels.GRUModel.output_dim = 20
+
+
+#MyCNN.kernel_size = 3
 # MyCNN.filter1 = 32
 # MyCNN.filter2 = 64
-MyCNN.dropout_rate = 0.1
-MyCNN.maxpoolwindow = 2
+#MyCNN.dropout_rate = 0.1
+#MyCNN.maxpoolwindow = 2
